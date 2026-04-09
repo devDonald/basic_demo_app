@@ -15,12 +15,12 @@ class CalcBtn extends StatelessWidget {
     return Container(
       padding: .all(20),
       width: width??101,
-      color: bgColor??Colors.grey[700],
+      color: bgColor??Colors.grey[800],
       child: Center(
         child: Text(
           text,
           style: TextStyle(
-              fontSize: 30,
+              fontSize: 32,
               fontWeight: .w900,
               color: Colors.white
           ),
