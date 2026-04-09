@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:hugeicons/hugeicons.dart';
 
-import 'first_class.dart';
+import 'login_screen.dart';
 
 void main() {
 
-  runApp(FirstScreen());
+  runApp(LoginScreen());
 }
 
 
