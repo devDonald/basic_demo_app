@@ -71,6 +71,7 @@ class _RegisterScreenState extends State<RegisterScreen>{
         border: OutlineInputBorder(  // Default border style
           borderRadius: BorderRadius.circular(30),
           borderSide: BorderSide(color: Colors.grey),
+
         ),
 
         enabledBorder: OutlineInputBorder( // Border when field is not selected
