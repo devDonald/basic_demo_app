@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class AdminScreen extends StatelessWidget {
-  const AdminScreen({super.key});
+class Admin extends StatelessWidget {
+  const Admin({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,10 +10,10 @@ class AdminScreen extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Scaffold(
           appBar: AppBar(
+            //Using the AppBar widget to set title and Icons on the app.
             backgroundColor: Colors.white,
             title: Text(
               "9:41",
-              
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
 
@@ -25,13 +25,15 @@ class AdminScreen extends StatelessWidget {
           ),
 
           body: SingleChildScrollView(
+            //I use SingleChildScrollView so i can make the code in body Scrollable.
             child: Column(
               children: [
                 Container(
+                  //I use the Container widget so i can give the background color around the Row Containing the Text"Admin settings" and the icons.
                   color: Colors.white,
                   child: Row(
+                    //i use this row to be able to give space between the widget in it.
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
                     children: [
                       Row(
                         children: [
@@ -62,6 +64,7 @@ class AdminScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
                   child: Container(
+                    //Using the Container to give Background Color to the widgets in it.
                     color: Colors.white,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -69,8 +72,9 @@ class AdminScreen extends StatelessWidget {
                         Container(
                           width: 150,
                           height: 38,
-
-                          decoration: BoxDecoration(
+                          decoration:
+                          //Using the decoration widget to give the Container Color and Border radius.
+                          BoxDecoration(
                             color: Colors.teal[500],
                             borderRadius: BorderRadius.circular(16),
                           ),
@@ -98,11 +102,14 @@ class AdminScreen extends StatelessWidget {
                 Row(
                   children: [
                     Container(
-                      decoration: BoxDecoration(
+                      decoration:
+                      //Using the decoration widget to give the Container Color and Border radius
+                      BoxDecoration(
                         color: Colors.white,
-
                         borderRadius: BorderRadius.circular(12),
-                        boxShadow: [
+                        boxShadow:
+                        //Using the Box shadow widget to give the Container blur radius
+                        [
                           BoxShadow(blurRadius: 1, color: Colors.grey),
                         ],
                       ),
@@ -111,13 +118,16 @@ class AdminScreen extends StatelessWidget {
                         children: [
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            //Using the mainAxisAlignment to give space between the widgets in it.
                             children: [
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
+                                //Giving the Row a padding of all sides.
                                 child: Row(
                                   children: [
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
+                                      //Giving the Row a padding of all sides.
                                       child: Icon(
                                         Icons.monitor_heart_outlined,
                                         color: Colors.teal,
@@ -141,6 +151,7 @@ class AdminScreen extends StatelessWidget {
                                   children: [
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
+                                      //Giving the Text a padding of all sides.
                                       child: Text(
                                         "+ Add New",
                                         style: TextStyle(
@@ -159,11 +170,14 @@ class AdminScreen extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Container(
-                              decoration: BoxDecoration(
+                              decoration:
+                              //Using the decoration widget to give the Container Color and Border radius
+                              BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(12),
-
-                                boxShadow: [
+                                boxShadow:
+                                //Using the Box shadow widget to give the Container blur radius
+                                [
                                   BoxShadow(blurRadius: 1, color: Colors.grey),
                                 ],
                               ),
@@ -172,14 +186,14 @@ class AdminScreen extends StatelessWidget {
                                   Column(
                                     children: [
                                       Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        //Using the mainAxisAlignment to give space between the widgets in it.
                                         children: [
                                           Padding(
                                             padding: const EdgeInsets.all(8.0),
                                             child: Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              //Using the crossAxisAlignment to make the widgets in it start from the left.
                                               children: [
                                                 Text(
                                                   "Registered Nurse (RN)",
@@ -203,13 +217,17 @@ class AdminScreen extends StatelessWidget {
 
                                           Padding(
                                             padding: const EdgeInsets.all(12.0),
+                                            //Giving the Container a padding of all sides.
                                             child: Container(
-                                              decoration: BoxDecoration(
+                                              decoration:
+                                              //Using the decoration widget to give the Container Color and Border radius
+                                              BoxDecoration(
                                                 color: Colors.white,
-
                                                 borderRadius:
-                                                    BorderRadius.circular(8),
-                                                boxShadow: [
+                                                BorderRadius.circular(8),
+                                                boxShadow:
+                                                //Using the Box shadow widget to give the Container blur radius and color.
+                                                [
                                                   BoxShadow(
                                                     blurRadius: 0.5,
                                                     color: Colors.teal,
@@ -220,20 +238,19 @@ class AdminScreen extends StatelessWidget {
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsets.all(
-                                                          8.0,
-                                                        ),
+                                                    const EdgeInsets.all(8.0),
+                                                    //Giving the Text a padding of all sides.
                                                     child: Text(
                                                       "Active",
                                                       textAlign:
-                                                          TextAlign.center,
+                                                      TextAlign.center,
                                                       style: TextStyle(
                                                         color:
-                                                            Colors.green[700],
+                                                        Colors.green[700],
                                                         fontSize: 13,
 
                                                         fontWeight:
-                                                            FontWeight.bold,
+                                                        FontWeight.bold,
                                                       ),
                                                     ),
                                                   ),
@@ -246,29 +263,31 @@ class AdminScreen extends StatelessWidget {
 
                                       Padding(
                                         padding: const EdgeInsets.all(8.0),
+                                        //Giving the Row a padding of all sides.
                                         child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          //Using the mainAxisAlignment to give space between the widgets in it.
                                           children: [
                                             Column(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
-
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              //Using the mainAxisAlignment to give space between the widgets in it.
                                               children: [
                                                 Container(
-                                                  decoration: BoxDecoration(
+                                                  decoration:
+                                                  //Using the decoration widget to give the Container Color.
+                                                  BoxDecoration(
                                                     color: Colors.grey[100],
                                                   ),
-
                                                   width: 165,
+                                                  //Giving the Container width.
                                                   child: Column(
+                                                    //Using thw Column to stack the Text on eachother.
                                                     children: [
                                                       Text(
                                                         'Base Rate',
                                                         style: TextStyle(
                                                           color:
-                                                              Colors.grey[700],
+                                                          Colors.grey[700],
                                                           fontSize: 9,
                                                         ),
                                                       ),
@@ -278,7 +297,7 @@ class AdminScreen extends StatelessWidget {
                                                           color: Colors.black,
                                                           fontSize: 18,
                                                           fontWeight:
-                                                              FontWeight.bold,
+                                                          FontWeight.bold,
                                                         ),
                                                       ),
                                                     ],
@@ -289,18 +308,20 @@ class AdminScreen extends StatelessWidget {
                                             Column(
                                               children: [
                                                 Container(
-                                                  decoration: BoxDecoration(
+                                                  decoration:
+                                                  //Using the decoration widget to give the Container Color.
+                                                  BoxDecoration(
                                                     color: Colors.grey[100],
                                                   ),
                                                   width: 165,
-
                                                   child: Column(
+                                                    //Using the Column to stack the Text on eachother.
                                                     children: [
                                                       Text(
                                                         'Overtime Rate',
                                                         style: TextStyle(
                                                           color:
-                                                              Colors.grey[700],
+                                                          Colors.grey[700],
                                                           fontSize: 9,
                                                         ),
                                                       ),
@@ -310,7 +331,7 @@ class AdminScreen extends StatelessWidget {
                                                           color: Colors.black,
                                                           fontSize: 18,
                                                           fontWeight:
-                                                              FontWeight.bold,
+                                                          FontWeight.bold,
                                                         ),
                                                       ),
                                                     ],
@@ -329,12 +350,16 @@ class AdminScreen extends StatelessWidget {
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
+                            //Giving the Container a padding of all sides.
                             child: Container(
-                              decoration: BoxDecoration(
+                              decoration:
+                              //Using the decoration widget to give the Container Color and Border radius.
+                              BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(12),
-
-                                boxShadow: [
+                                boxShadow:
+                                //Using the Box shadow widget to give the Container blur radius and color.
+                                [
                                   BoxShadow(blurRadius: 1, color: Colors.grey),
                                 ],
                               ),
@@ -343,14 +368,15 @@ class AdminScreen extends StatelessWidget {
                                   Column(
                                     children: [
                                       Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        //Using the mainAxisAlignment to give space between the widgets in it.
                                         children: [
                                           Padding(
                                             padding: const EdgeInsets.all(8.0),
+                                            //Giving the Column a padding of all sides.
                                             child: Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              //Using the crossAxisAlignment to make the widgets in it start from the left.
                                               children: [
                                                 Text(
                                                   "Home Health Aide(HHA)",
@@ -374,13 +400,16 @@ class AdminScreen extends StatelessWidget {
 
                                           Padding(
                                             padding: const EdgeInsets.all(12.0),
+                                            //Giving the Column a padding of all sides.
                                             child: Container(
-                                              decoration: BoxDecoration(
+                                              decoration:
+                                              //Using the decoration widget to give the Container Color and Border radius
+                                              BoxDecoration(
                                                 color: Colors.white,
-
-                                                borderRadius:
-                                                    BorderRadius.circular(8),
-                                                boxShadow: [
+                                                borderRadius: BorderRadius.circular(8),
+                                                boxShadow:
+                                                //Using the Box shadow widget to give the Container blur radius and color.
+                                                [
                                                   BoxShadow(
                                                     blurRadius: 0.5,
                                                     color: Colors.teal,
@@ -391,20 +420,18 @@ class AdminScreen extends StatelessWidget {
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsets.all(
-                                                          8.0,
-                                                        ),
+                                                    const EdgeInsets.all(8.0),
+                                                    //Giving the Text a padding of all sides.
                                                     child: Text(
                                                       "Active",
                                                       textAlign:
-                                                          TextAlign.center,
+                                                      TextAlign.center,
                                                       style: TextStyle(
                                                         color:
-                                                            Colors.green[700],
+                                                        Colors.green[700],
                                                         fontSize: 12,
-
                                                         fontWeight:
-                                                            FontWeight.bold,
+                                                        FontWeight.bold,
                                                       ),
                                                     ),
                                                   ),
@@ -417,29 +444,27 @@ class AdminScreen extends StatelessWidget {
 
                                       Padding(
                                         padding: const EdgeInsets.all(8.0),
+                                        //Giving the Row a padding of all sides.
                                         child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          //Using the mainAxisAlignment to give space between the widgets in it.
                                           children: [
                                             Column(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
-
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                               children: [
                                                 Container(
                                                   decoration: BoxDecoration(
                                                     color: Colors.grey[100],
                                                   ),
-
                                                   width: 165,
                                                   child: Column(
+                                                    //Using the Column to stack the Text on eachother.
                                                     children: [
                                                       Text(
                                                         'Base Rate',
                                                         style: TextStyle(
                                                           color:
-                                                              Colors.grey[700],
+                                                          Colors.grey[700],
                                                           fontSize: 11,
                                                         ),
                                                       ),
@@ -450,7 +475,7 @@ class AdminScreen extends StatelessWidget {
                                                           color: Colors.black,
                                                           fontSize: 18,
                                                           fontWeight:
-                                                              FontWeight.bold,
+                                                          FontWeight.bold,
                                                         ),
                                                       ),
                                                     ],
@@ -465,14 +490,15 @@ class AdminScreen extends StatelessWidget {
                                                     color: Colors.grey[100],
                                                   ),
                                                   width: 164,
-
+                                                  //Giving the Container width.
                                                   child: Column(
+                                                    //Using the Column to stack the Text on eachother.
                                                     children: [
                                                       Text(
                                                         'Overtime Rate',
                                                         style: TextStyle(
                                                           color:
-                                                              Colors.grey[700],
+                                                          Colors.grey[700],
                                                           fontSize: 11,
                                                         ),
                                                       ),
@@ -482,7 +508,7 @@ class AdminScreen extends StatelessWidget {
                                                           color: Colors.black,
                                                           fontSize: 18,
                                                           fontWeight:
-                                                              FontWeight.bold,
+                                                          FontWeight.bold,
                                                         ),
                                                       ),
                                                     ],
@@ -506,26 +532,32 @@ class AdminScreen extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
+                  //Giving the Column a padding of all sides.
                   child: Column(
                     children: [
                       Row(
                         children: [
                           Container(
-                            decoration: BoxDecoration(
+                            decoration:
+                            //Using the decoration widget to give the Container Color and Border radius
+                            BoxDecoration(
                               color: Colors.white,
-
                               borderRadius: BorderRadius.circular(12),
-                              boxShadow: [
+                              boxShadow:
+                              //Using the Box shadow widget to give the Container blur radius and color.
+                              [
                                 BoxShadow(blurRadius: 1, color: Colors.grey),
                               ],
                             ),
                             width: 350,
+                            //Giving the Container width.
                             child: Column(
                               children: [
                                 Row(
                                   children: [
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
+                                      //Giving the Icon a padding of all sides.
                                       child: Icon(
                                         Icons.access_time,
                                         color: Colors.teal,
@@ -533,6 +565,7 @@ class AdminScreen extends StatelessWidget {
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
+                                      //Giving the Text a padding of all sides.
                                       child: Text(
                                         "API Integrations",
                                         style: TextStyle(
@@ -548,11 +581,14 @@ class AdminScreen extends StatelessWidget {
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: Container(
-                                    decoration: BoxDecoration(
+                                    decoration:
+                                    //Using the decoration widget to give the Container Color and Border radius.
+                                    BoxDecoration(
                                       color: Colors.white,
                                       borderRadius: BorderRadius.circular(12),
-
-                                      boxShadow: [
+                                      boxShadow:
+                                      //Using the Box shadow widget to give the Container blur radius and color.
+                                      [
                                         BoxShadow(
                                           blurRadius: 1,
                                           color: Colors.black,
@@ -564,18 +600,15 @@ class AdminScreen extends StatelessWidget {
                                         Column(
                                           children: [
                                             Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              //Using the mainAxisAlignment to give space between the widgets in it.
                                               children: [
                                                 Padding(
-                                                  padding: const EdgeInsets.all(
-                                                    8.0,
-                                                  ),
+                                                  padding: const EdgeInsets.all(8.0),
+                                                  //Giving the Column a padding of all sides.
                                                   child: Column(
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
+                                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                                    //Using the crossAxisAlignment to make the widgets in it start from the left.
                                                     children: [
                                                       Text(
                                                         "Facility Call Light",
@@ -583,16 +616,16 @@ class AdminScreen extends StatelessWidget {
                                                           color: Colors.black,
                                                           fontSize: 16,
                                                           fontWeight:
-                                                              FontWeight.bold,
+                                                          FontWeight.bold,
                                                         ),
                                                       ),
                                                       Text(
                                                         "Available for active clients 24/7 hrs",
                                                         textAlign:
-                                                            TextAlign.start,
+                                                        TextAlign.start,
                                                         style: TextStyle(
                                                           fontWeight:
-                                                              FontWeight.w100,
+                                                          FontWeight.w100,
                                                           fontSize: 10,
                                                         ),
                                                       ),
@@ -600,18 +633,17 @@ class AdminScreen extends StatelessWidget {
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsets.all(
-                                                    12.0,
-                                                  ),
+                                                  padding: const EdgeInsets.all(12.0),
+                                                  //Giving the Container a padding of all sides.
                                                   child: Container(
-                                                    decoration: BoxDecoration(
+                                                    decoration:
+                                                    //Using the decoration widget to give the Container Color and Border radius
+                                                    BoxDecoration(
                                                       color: Colors.white,
-
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                            8,
-                                                          ),
-                                                      boxShadow: [
+                                                      borderRadius: BorderRadius.circular(8),
+                                                      boxShadow:
+                                                      //Using the Box shadow widget to give the Container blur radius and color.
+                                                      [
                                                         BoxShadow(
                                                           blurRadius: 0.5,
                                                           color: Colors.teal,
@@ -622,21 +654,15 @@ class AdminScreen extends StatelessWidget {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsets.all(
-                                                                8.0,
-                                                              ),
+                                                          const EdgeInsets.all(8.0),
+                                                          //Giving the Row a padding of all sides.
                                                           child: Text(
                                                             "Active",
-                                                            textAlign: TextAlign
-                                                                .center,
+                                                            textAlign: TextAlign.center,
                                                             style: TextStyle(
-                                                              color: Colors
-                                                                  .green[700],
+                                                              color: Colors.green[700],
                                                               fontSize: 11,
-
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold,
+                                                              fontWeight: FontWeight.bold,
                                                             ),
                                                           ),
                                                         ),
@@ -679,16 +705,17 @@ class AdminScreen extends StatelessWidget {
                             child: Column(
                               children: [
                                 Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  //Using the mainAxisAlignment to give space between the widgets in it.
                                   children: [
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
+                                      //Giving the Row a padding of all sides.
                                       child: Row(
                                         children: [
                                           Padding(
                                             padding: const EdgeInsets.all(8.0),
+                                            //Giving the Icon a padding of all sides.
                                             child: Icon(
                                               Icons.access_time,
                                               color: Colors.teal,
@@ -707,9 +734,9 @@ class AdminScreen extends StatelessWidget {
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
+                                      //Giving the Row a padding of all sides.
                                       child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.end,
+                                        mainAxisAlignment: MainAxisAlignment.end,
                                         children: [
                                           Padding(
                                             padding: const EdgeInsets.all(8.0),
@@ -730,12 +757,16 @@ class AdminScreen extends StatelessWidget {
 
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
+                                  //Giving the Container a padding of all sides.
                                   child: Container(
-                                    decoration: BoxDecoration(
+                                    decoration:
+                                    //Using the decoration widget to give the Container Color and Border radius
+                                    BoxDecoration(
                                       color: Colors.white,
                                       borderRadius: BorderRadius.circular(12),
-
-                                      boxShadow: [
+                                      boxShadow:
+                                      //Using the Box shadow widget to give the Container blur radius and color.
+                                      [
                                         BoxShadow(
                                           blurRadius: 1,
                                           color: Colors.grey,
@@ -745,43 +776,40 @@ class AdminScreen extends StatelessWidget {
                                     child: Column(
                                       children: [
                                         Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          //Using the crossAxisAlignment to make the widgets in it start from the left.
                                           children: [
                                             Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              //Using the mainAxisAlignment to give space between the widgets in it.
                                               children: [
                                                 Padding(
                                                   padding:
-                                                      const EdgeInsets.only(
-                                                        top: 12.0,
-                                                        left: 12,
-                                                      ),
+                                                  const EdgeInsets.only(top: 12.0, left: 12),
+                                                  //Giving the Text a padding only on the top and left sides.
                                                   child: Text(
                                                     "Staff",
                                                     style: TextStyle(
                                                       color: Colors.black,
                                                       fontSize: 16,
                                                       fontWeight:
-                                                          FontWeight.bold,
+                                                      FontWeight.bold,
                                                     ),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsets.all(
-                                                    12.0,
-                                                  ),
+                                                  padding: const EdgeInsets.all(12.0),
+                                                  //Giving the Container a padding of all sides.
                                                   child: Container(
-                                                    decoration: BoxDecoration(
+                                                    decoration:
+                                                    //Using the decoration widget to give the Container Color and Border radius
+                                                    BoxDecoration(
                                                       color: Colors.white,
-
                                                       borderRadius:
-                                                          BorderRadius.circular(
-                                                            8,
-                                                          ),
-                                                      boxShadow: [
+                                                      BorderRadius.circular(8),
+                                                      boxShadow:
+                                                      //Using the Box shadow widget to give the Container blur radius and color.
+                                                      [
                                                         BoxShadow(
                                                           blurRadius: 0.5,
                                                           color: Colors.teal,
@@ -792,21 +820,15 @@ class AdminScreen extends StatelessWidget {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsets.all(
-                                                                8.0,
-                                                              ),
+                                                          const EdgeInsets.all(8.0),
+                                                          //Giving the Text a padding of all sides.
                                                           child: Text(
                                                             "Active",
-                                                            textAlign: TextAlign
-                                                                .center,
+                                                            textAlign: TextAlign.center,
                                                             style: TextStyle(
-                                                              color: Colors
-                                                                  .green[700],
+                                                              color: Colors.green[700],
                                                               fontSize: 12,
-
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold,
+                                                              fontWeight: FontWeight.bold,
                                                             ),
                                                           ),
                                                         ),
@@ -818,9 +840,8 @@ class AdminScreen extends StatelessWidget {
                                             ),
 
                                             Padding(
-                                              padding: const EdgeInsets.only(
-                                                left: 8.0,
-                                              ),
+                                              padding: const EdgeInsets.only(left: 8.0),
+                                              //Giving the Text a padding only on the left sides.
                                               child: Text(
                                                 "Available for active clients 24/7 hrs",
                                                 textAlign: TextAlign.start,
@@ -831,10 +852,8 @@ class AdminScreen extends StatelessWidget {
                                               ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsets.only(
-                                                left: 8.0,
-                                                bottom: 8,
-                                              ),
+                                              padding: const EdgeInsets.only(left: 8.0,bottom: 8),
+                                              //Giving the Text a padding only on the left side and bottom side.
                                               child: Text(
                                                 "Standard Office Hours (15 safe zone)",
                                                 textAlign: TextAlign.start,
@@ -846,47 +865,38 @@ class AdminScreen extends StatelessWidget {
                                             ),
 
                                             Padding(
-                                              padding: const EdgeInsets.all(
-                                                8.0,
-                                              ),
+                                              padding: const EdgeInsets.all(8.0),
+                                              //Giving the Row a padding of all sides.
                                               child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceBetween,
+                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                //Using the mainAxisAlignment to give space between the widgets in it.
                                                 children: [
                                                   Column(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .spaceBetween,
-
+                                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                     children: [
                                                       Container(
                                                         decoration:
-                                                            BoxDecoration(
-                                                              color: Colors
-                                                                  .grey[100],
-                                                            ),
-
+                                                        BoxDecoration(
+                                                          color: Colors.grey[100],
+                                                        ),
                                                         width: 157,
+                                                        //Giving the Container width.
                                                         child: Column(
                                                           children: [
                                                             Text(
                                                               'clock-in/clock-Out',
                                                               style: TextStyle(
-                                                                color: Colors
-                                                                    .grey[700],
+                                                                color: Colors.grey[700],
                                                                 fontSize: 9,
                                                               ),
                                                             ),
                                                             Text(
                                                               "9:00AM-5:00PM",
                                                               style: TextStyle(
-                                                                color: Colors
-                                                                    .black,
+                                                                color: Colors.black,
                                                                 fontSize: 17,
                                                                 fontWeight:
-                                                                    FontWeight
-                                                                        .bold,
+                                                                FontWeight.bold,
                                                               ),
                                                             ),
                                                           ],
@@ -898,31 +908,25 @@ class AdminScreen extends StatelessWidget {
                                                     children: [
                                                       Container(
                                                         decoration:
-                                                            BoxDecoration(
-                                                              color: Colors
-                                                                  .grey[100],
-                                                            ),
+                                                        //Using the decoration widget to give the Container Color.
+                                                        BoxDecoration(
+                                                          color: Colors.grey[100],
+                                                        ),
                                                         width: 157,
-
+                                                        //Giving the Container width.
                                                         child: Column(
                                                           children: [
-                                                            Text(
-                                                              'Days',
+                                                            Text('Days',
                                                               style: TextStyle(
-                                                                color: Colors
-                                                                    .grey[700],
+                                                                color: Colors.grey[700],
                                                                 fontSize: 9,
                                                               ),
                                                             ),
-                                                            Text(
-                                                              "Mon-Friday",
+                                                            Text("Mon-Friday",
                                                               style: TextStyle(
-                                                                color: Colors
-                                                                    .black,
+                                                                color: Colors.black,
                                                                 fontSize: 18,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .bold,
+                                                                fontWeight: FontWeight.bold,
                                                               ),
                                                             ),
                                                           ],
@@ -953,29 +957,35 @@ class AdminScreen extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.all(8.0),
+                          //Giving the Container a padding of all sides.
                           child: Container(
-                            decoration: BoxDecoration(
+                            decoration:
+                            //Using the decoration widget to give the Container Color and Border radius
+                            BoxDecoration(
                               color: Colors.white,
-
                               borderRadius: BorderRadius.circular(12),
-                              boxShadow: [
+                              boxShadow:
+                              //Using the Box shadow widget to give the Container blur radius and color.
+                              [
                                 BoxShadow(blurRadius: 1, color: Colors.black),
                               ],
                             ),
                             width: 350,
+                            //Giving the Container width.
                             child: Column(
                               children: [
                                 Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  //Using the mainAxisAlignment to give space between the widgets in it.
                                   children: [
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
+                                      //Giving the Row a padding of all sides.
                                       child: Row(
                                         children: [
                                           Padding(
                                             padding: const EdgeInsets.all(8.0),
+                                            //Giving the Icon a padding of all sides.
                                             child: Icon(
                                               Icons.account_balance,
                                               color: Colors.teal,
@@ -994,9 +1004,9 @@ class AdminScreen extends StatelessWidget {
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
+                                      //Giving the Row a padding of all sides.
                                       child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.end,
+                                        mainAxisAlignment: MainAxisAlignment.end,
                                         children: [
                                           Padding(
                                             padding: const EdgeInsets.all(8.0),
@@ -1018,10 +1028,8 @@ class AdminScreen extends StatelessWidget {
                                 ),
 
                                 Padding(
-                                  padding: const EdgeInsets.only(
-                                    left: 8.0,
-                                    bottom: 8,
-                                  ),
+                                  padding: const EdgeInsets.only(left: 8.0,bottom: 8),
+                                  //Giving the Row a padding only on the left side and bottom side.
                                   child: Row(
                                     children: [
                                       Text(
@@ -1037,14 +1045,14 @@ class AdminScreen extends StatelessWidget {
                                 ),
 
                                 Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  //Using the mainAxisAlignment to give space between the widgets in it.
                                   children: [
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
+                                      //Giving the Column a padding of all sides.
                                       child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
+                                        crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
                                           Text(
                                             "Daily Overtime",
@@ -1075,21 +1083,23 @@ class AdminScreen extends StatelessWidget {
                                 ),
                                 Container(
                                   width: 270,
+                                  //Giving the Container width.
                                   child: Divider(
+                                    //Using the Divider widget go create a horizontal line also giving it height,thickness and color.
                                     height: 50,
                                     thickness: 1.5,
                                     color: Colors.grey[100],
                                   ),
                                 ),
                                 Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  //Using the mainAxisAlignment to give space between the widgets in it.
                                   children: [
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        //Using the crossAxisAlignment to make the widgets in it start from the left.
                                         children: [
                                           Text(
                                             "Weekly Overtime",
@@ -1120,21 +1130,24 @@ class AdminScreen extends StatelessWidget {
                                 ),
                                 Container(
                                   width: 270,
+                                  //Giving the Container width.
                                   child: Divider(
+                                    //Using the Divider widget go create a horizontal line also giving it height,thickness and color.
                                     height: 50,
                                     thickness: 1.5,
                                     color: Colors.grey[100],
                                   ),
                                 ),
                                 Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  //Using the mainAxisAlignment to give space between the widgets in it.
                                   children: [
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
+                                      //Giving the Column a padding of all sides.
                                       child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        //Using the crossAxisAlignment to make the widgets in it start from the left.
                                         children: [
                                           Text(
                                             "Payroll Syncing",
@@ -1173,21 +1186,25 @@ class AdminScreen extends StatelessWidget {
                                 ),
                                 Container(
                                   width: 270,
+                                  //Giving the Container width.
                                   child: Divider(
+                                    //Using the Divider widget go create a horizontal line also giving it height,thickness and color.
+
                                     height: 50,
                                     thickness: 1.5,
                                     color: Colors.grey[100],
                                   ),
                                 ),
                                 Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  //Using the mainAxisAlignment to give space between the widgets in it.
                                   children: [
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
+                                      //Giving the Column a padding of all sides.
                                       child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        //Using the crossAxisAlignment to make the widgets in it start from the left.
                                         children: [
                                           Text(
                                             "Mandatory Breaks",
@@ -1218,6 +1235,7 @@ class AdminScreen extends StatelessWidget {
                                 ),
                                 Container(
                                   width: 270,
+                                  //Giving the Container width.
                                   child: Divider(
                                     height: 50,
                                     thickness: 1.5,
@@ -1225,14 +1243,14 @@ class AdminScreen extends StatelessWidget {
                                   ),
                                 ),
                                 Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  //Using the mainAxisAlignment to give space between the widgets in it.
                                   children: [
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        //Using the crossAxisAlignment to make the widgets in it start from the left.
                                         children: [
                                           Text(
                                             "Geofence Clock-in",
@@ -1271,26 +1289,32 @@ class AdminScreen extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
+                  //Giving the Column a padding of all sides.
                   child: Column(
                     children: [
                       Row(
                         children: [
                           Container(
-                            decoration: BoxDecoration(
+                            decoration:
+                            //Using the decoration widget to give the Container Color and Border radius
+                            BoxDecoration(
                               color: Colors.white,
-
                               borderRadius: BorderRadius.circular(12),
-                              boxShadow: [
+                              boxShadow:
+                              //Using the Box shadow widget to give the Container blur radius and color.
+                              [
                                 BoxShadow(blurRadius: 1, color: Colors.black),
                               ],
                             ),
                             width: 350,
+                            //Giving the Container width.
                             child: Column(
                               children: [
                                 Row(
                                   children: [
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
+                                      //Giving the Icon a padding of all sides.
                                       child: Icon(
                                         Icons.mark_email_unread,
                                         color: Colors.teal,
@@ -1312,12 +1336,16 @@ class AdminScreen extends StatelessWidget {
 
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
+                                  //Giving the Container a padding of all sides.
                                   child: Container(
-                                    decoration: BoxDecoration(
+                                    decoration:
+                                    //Using the decoration widget to give the Container Color and Border radius
+                                    BoxDecoration(
                                       color: Colors.white,
                                       borderRadius: BorderRadius.circular(8),
-
-                                      boxShadow: [
+                                      boxShadow:
+                                      //Using the Box shadow widget to give the Container blur radius and color.
+                                      [
                                         BoxShadow(
                                           blurRadius: 1,
                                           color: Colors.grey,
@@ -1329,62 +1357,52 @@ class AdminScreen extends StatelessWidget {
                                         Column(
                                           children: [
                                             Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              //Using the mainAxisAlignment to give space between the widgets in it.
                                               children: [
                                                 Column(
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
+                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  //Using the crossAxisAlignment to make the widgets in it start from the left.
                                                   children: [
                                                     Row(
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsets.all(
-                                                                8.0,
-                                                              ),
+                                                          const EdgeInsets.all(8.0),
+                                                          //Giving the Icon a padding of all sides.
                                                           child: Icon(
                                                             Icons.mail_outlined,
-                                                            color: Colors
-                                                                .blueAccent,
+                                                            color: Colors.blueAccent,
                                                           ),
                                                         ),
 
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsets.all(
-                                                                8.0,
-                                                              ),
+                                                          const EdgeInsets.all(8.0),
+                                                          //Giving the Column a padding of all sides.
                                                           child: Column(
-                                                            crossAxisAlignment:
-                                                                CrossAxisAlignment
-                                                                    .start,
+                                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                                            //Using the crossAxisAlignment to make the widgets in it start from the left.
                                                             children: [
                                                               Text(
                                                                 "Shift Confirmation",
                                                                 style: TextStyle(
-                                                                  color: Colors
-                                                                      .black,
+                                                                  color: Colors.black,
                                                                   fontSize: 16,
                                                                   fontWeight:
-                                                                      FontWeight
-                                                                          .bold,
+                                                                  FontWeight.bold,
                                                                 ),
                                                               ),
 
                                                               Padding(
                                                                 padding:
-                                                                    const EdgeInsets.only(
-                                                                      left: 8.0,
-                                                                    ),
+                                                                const EdgeInsets.only(left: 8.0),
+                                                                //Giving the Text a padding only on the left side.
                                                                 child: Text(
                                                                   "SMS and Email",
                                                                   style: TextStyle(
-                                                                    color: Colors
-                                                                        .grey,
-                                                                    fontSize:
-                                                                        12,
+                                                                    color: Colors.grey,
+                                                                    fontSize: 12,
                                                                   ),
                                                                 ),
                                                               ),
@@ -1397,9 +1415,8 @@ class AdminScreen extends StatelessWidget {
                                                 ),
 
                                                 Padding(
-                                                  padding: const EdgeInsets.all(
-                                                    8.0,
-                                                  ),
+                                                  padding: const EdgeInsets.all(8.0),
+                                                  //Giving the Icon a padding of all sides.
                                                   child: Icon(
                                                     Icons.edit,
                                                     color: Colors.grey,
@@ -1415,12 +1432,16 @@ class AdminScreen extends StatelessWidget {
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
+                                  //Giving the Container a padding of all sides.
                                   child: Container(
-                                    decoration: BoxDecoration(
+                                    decoration:
+                                    //Using the decoration widget to give the Container Color and Border radius.
+                                    BoxDecoration(
                                       color: Colors.white,
                                       borderRadius: BorderRadius.circular(8),
-
-                                      boxShadow: [
+                                      boxShadow:
+                                      //Using the Box shadow widget to give the Container blur radius and color.
+                                      [
                                         BoxShadow(
                                           blurRadius: 1,
                                           color: Colors.grey,
@@ -1432,62 +1453,51 @@ class AdminScreen extends StatelessWidget {
                                         Column(
                                           children: [
                                             Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              //Using the mainAxisAlignment to give space between the widgets in it.
                                               children: [
                                                 Column(
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
+                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  //Using the crossAxisAlignment to make the widgets in it start from the left.
                                                   children: [
                                                     Row(
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsets.all(
-                                                                8.0,
-                                                              ),
+                                                          const EdgeInsets.all(8.0),
+                                                          //Giving the Icon a padding of all sides.
                                                           child: Icon(
                                                             Icons.warning,
-                                                            color: Colors
-                                                                .orange[500],
+                                                            color: Colors.orange[500],
                                                           ),
                                                         ),
 
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsets.all(
-                                                                8.0,
-                                                              ),
+                                                          const EdgeInsets.all(8.0),
+                                                          //Giving the Column a padding of all sides.
                                                           child: Column(
-                                                            crossAxisAlignment:
-                                                                CrossAxisAlignment
-                                                                    .start,
+                                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                                            //Using the crossAxisAlignment to make the widgets in it start from the left.
                                                             children: [
                                                               Text(
                                                                 "Credential Expiry",
                                                                 style: TextStyle(
-                                                                  color: Colors
-                                                                      .black,
+                                                                  color: Colors.black,
                                                                   fontSize: 16,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .bold,
+                                                                  fontWeight: FontWeight.bold,
                                                                 ),
                                                               ),
 
                                                               Padding(
                                                                 padding:
-                                                                    const EdgeInsets.only(
-                                                                      left: 8.0,
-                                                                    ),
+                                                                const EdgeInsets.only(left: 8.0),
+                                                                //Giving the Text a padding only on the left side.
                                                                 child: Text(
                                                                   "Email only (30 days prior)",
                                                                   style: TextStyle(
-                                                                    color: Colors
-                                                                        .grey,
-                                                                    fontSize:
-                                                                        12,
+                                                                    color: Colors.grey,
+                                                                    fontSize: 12,
                                                                   ),
                                                                 ),
                                                               ),
@@ -1500,9 +1510,8 @@ class AdminScreen extends StatelessWidget {
                                                 ),
 
                                                 Padding(
-                                                  padding: const EdgeInsets.all(
-                                                    8.0,
-                                                  ),
+                                                  padding: const EdgeInsets.all(8.0),
+                                                  //Giving the Icon a padding of all sides.
                                                   child: Icon(
                                                     Icons.edit,
                                                     color: Colors.grey,
@@ -1526,27 +1535,34 @@ class AdminScreen extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
+                  //Giving the Column a padding of all sides.
                   child: Column(
                     children: [
                       Row(
                         children: [
                           Container(
-                            decoration: BoxDecoration(
+                            decoration:
+                            //Using the decoration widget to give the Container Color and Border radius
+                            BoxDecoration(
                               color: Colors.white,
-
                               borderRadius: BorderRadius.circular(12),
-                              boxShadow: [
+                              boxShadow:
+                              //Using the Box shadow widget to give the Container blur radius and color.
+                              [
                                 BoxShadow(blurRadius: 1.5, color: Colors.red),
                               ],
                             ),
                             width: 350,
+                            //Giving the Container width.
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
+                              //Using the crossAxisAlignment to make the widgets in it start from the left.
                               children: [
                                 Row(
                                   children: [
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
+                                      //Giving the Icon a padding of all sides.
                                       child: Icon(
                                         Icons.delete_forever_outlined,
                                         color: Colors.red[700],
@@ -1554,6 +1570,7 @@ class AdminScreen extends StatelessWidget {
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
+                                      //Giving the Text a padding of all sides.
                                       child: Text(
                                         "Danger Zone",
                                         style: TextStyle(
@@ -1567,10 +1584,8 @@ class AdminScreen extends StatelessWidget {
                                 ),
 
                                 Padding(
-                                  padding: const EdgeInsets.only(
-                                    left: 8.0,
-                                    bottom: 8,
-                                  ),
+                                  padding: const EdgeInsets.only(left: 8.0,bottom: 8),
+                                  //Giving the Text a padding only on the left side and bottom side.
                                   child: Text(
                                     "Irreversible actions for your Organization",
                                   ),
@@ -1578,12 +1593,16 @@ class AdminScreen extends StatelessWidget {
 
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
+                                  //Giving the Container a padding of all sides.
                                   child: Container(
-                                    decoration: BoxDecoration(
+                                    decoration:
+                                    //Using the decoration widget to give the Container Color and Border radius
+                                    BoxDecoration(
                                       color: Colors.white,
                                       borderRadius: BorderRadius.circular(8),
-
-                                      boxShadow: [
+                                      boxShadow:
+                                      //Using the Box shadow widget to give the Container blur radius and color.
+                                      [
                                         BoxShadow(
                                           blurRadius: 1,
                                           color: Colors.red,
@@ -1595,50 +1614,41 @@ class AdminScreen extends StatelessWidget {
                                         Column(
                                           children: [
                                             Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              //Using the mainAxisAlignment to give space between the widgets in it.
                                               children: [
                                                 Column(
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
+                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  //Using the crossAxisAlignment to make the widgets in it start from the left.
                                                   children: [
                                                     Row(
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsets.all(
-                                                                8.0,
-                                                              ),
+                                                          const EdgeInsets.all(8.0),
+                                                          //Giving the Column a padding of all sides.
                                                           child: Column(
-                                                            crossAxisAlignment:
-                                                                CrossAxisAlignment
-                                                                    .start,
+                                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                                            //Using the crossAxisAlignment to make the widgets in it start from the left.
                                                             children: [
                                                               Text(
                                                                 "Export Organization Data",
                                                                 style: TextStyle(
-                                                                  color: Colors
-                                                                      .black,
+                                                                  color: Colors.black,
                                                                   fontSize: 16,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .bold,
+                                                                  fontWeight: FontWeight.bold,
                                                                 ),
                                                               ),
 
                                                               Padding(
                                                                 padding:
-                                                                    const EdgeInsets.only(
-                                                                      left: 3.0,
-                                                                    ),
+                                                                const EdgeInsets.only(left: 3.0),
+                                                                //Giving the Text a padding only on the left side.
                                                                 child: Text(
                                                                   "Download all record as CSV",
                                                                   style: TextStyle(
-                                                                    color: Colors
-                                                                        .grey,
-                                                                    fontSize:
-                                                                        12,
+                                                                    color: Colors.grey,
+                                                                    fontSize: 12,
                                                                   ),
                                                                 ),
                                                               ),
@@ -1651,21 +1661,22 @@ class AdminScreen extends StatelessWidget {
                                                 ),
 
                                                 Padding(
-                                                  padding: const EdgeInsets.all(
-                                                    8.0,
-                                                  ),
+                                                  padding: const EdgeInsets.all(8.0),
+                                                  //Giving the Container a padding of all sides.
                                                   child: Container(
                                                     width: 70,
+                                                    //Giving the Container width.
                                                     height: 30,
-                                                    decoration: BoxDecoration(
+                                                    //Giving the Container height.
+                                                    decoration:
+                                                    //Using the decoration widget to give the Container Color and Border radius
+                                                    BoxDecoration(
                                                       color: Colors.white,
-
                                                       borderRadius:
-                                                          BorderRadius.circular(
-                                                            4,
-                                                          ),
-
-                                                      boxShadow: [
+                                                      BorderRadius.circular(4,),
+                                                      boxShadow:
+                                                      //Using the Box shadow widget to give the Container blur radius and color.
+                                                      [
                                                         BoxShadow(
                                                           blurRadius: 1,
                                                           color: Colors.grey,
@@ -1673,12 +1684,13 @@ class AdminScreen extends StatelessWidget {
                                                       ],
                                                     ),
                                                     child: Center(
+                                                      //Making the Text to be at the center of the Container.
                                                       child: Text(
                                                         "Export",
                                                         style: TextStyle(
                                                           fontSize: 13,
                                                           fontWeight:
-                                                              FontWeight.bold,
+                                                          FontWeight.bold,
                                                         ),
                                                       ),
                                                     ),
@@ -1694,12 +1706,16 @@ class AdminScreen extends StatelessWidget {
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
+                                  //Giving the Container a padding of all sides.
                                   child: Container(
-                                    decoration: BoxDecoration(
+                                    decoration:
+                                    //Using the decoration widget to give the Container Color and Border radius
+                                    BoxDecoration(
                                       color: Colors.white,
                                       borderRadius: BorderRadius.circular(8),
-
-                                      boxShadow: [
+                                      boxShadow:
+                                      //Using the Box shadow widget to give the Container blur radius and color.
+                                      [
                                         BoxShadow(
                                           blurRadius: 1.5,
                                           color: Colors.red,
@@ -1711,50 +1727,43 @@ class AdminScreen extends StatelessWidget {
                                         Column(
                                           children: [
                                             Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment
-                                                      .spaceBetween,
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              //Using the mainAxisAlignment to give space between the widgets in it.
                                               children: [
                                                 Column(
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
+                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  //Using the crossAxisAlignment to make the widgets in it start from the left.
                                                   children: [
                                                     Row(
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsets.all(
-                                                                8.0,
-                                                              ),
+                                                          const EdgeInsets.all(8.0),
+                                                          //Giving the Column a padding of all sides.
                                                           child: Column(
-                                                            crossAxisAlignment:
-                                                                CrossAxisAlignment
-                                                                    .start,
+                                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                                            //Using the crossAxisAlignment to make the widgets in it start from the left.
                                                             children: [
                                                               Text(
                                                                 "Deactivate Organization",
                                                                 style: TextStyle(
-                                                                  color: Colors
-                                                                      .red[600],
+                                                                  color: Colors.red[600],
                                                                   fontSize: 13,
                                                                   fontWeight:
-                                                                      FontWeight
-                                                                          .bold,
+                                                                  FontWeight.bold,
                                                                 ),
                                                               ),
 
                                                               Padding(
                                                                 padding:
-                                                                    const EdgeInsets.only(
-                                                                      left: 2.0,
-                                                                    ),
+                                                                const EdgeInsets.only(left: 2.0),
+                                                                //Giving the Text a padding only on the left sid.
                                                                 child: Text(
                                                                   "Suspend all access immediately",
                                                                   style: TextStyle(
-                                                                    color: Colors
-                                                                        .red,
+                                                                    color: Colors.red,
                                                                     fontSize:
-                                                                        12,
+                                                                    12,
                                                                   ),
                                                                 ),
                                                               ),
@@ -1767,28 +1776,27 @@ class AdminScreen extends StatelessWidget {
                                                 ),
 
                                                 Padding(
-                                                  padding: const EdgeInsets.all(
-                                                    8.0,
-                                                  ),
+                                                  padding: const EdgeInsets.all(8.0),
+                                                  //Giving the Container a padding of all sides.
                                                   child: Container(
                                                     width: 90,
+                                                    //Giving the Container width.
                                                     height: 30,
-                                                    decoration: BoxDecoration(
+                                                    //Giving the Container height.
+                                                    decoration:
+                                                    //Using the decoration widget to give the Container Color and Border radius
+                                                    BoxDecoration(
                                                       color: Colors.red[700],
-
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                            6,
-                                                          ),
+                                                      borderRadius: BorderRadius.circular(6),
                                                     ),
                                                     child: Center(
+                                                      //Making the Text to be at the center of the Container.
                                                       child: Text(
                                                         "Deactivate",
                                                         style: TextStyle(
                                                           color: Colors.white,
                                                           fontSize: 13,
-                                                          fontWeight:
-                                                              FontWeight.bold,
+                                                          fontWeight: FontWeight.bold,
                                                         ),
                                                       ),
                                                     ),
