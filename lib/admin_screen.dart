@@ -27,7 +27,7 @@ class Admin extends StatelessWidget {
           body: SingleChildScrollView(
             //I use SingleChildScrollView so i can make the code in body Scrollable.
             child: Column(
-              children: [
+                 children: [
                 Container(
                   //I use the Container widget so i can give the background color around the Row Containing the Text"Admin settings" and the icons.
                   color: Colors.white,
