@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
-
-import 'login_screen.dart';
+import 'register_screen.dart';
 
 void main() {
+  runApp(const MyApp());
+}
 
-  runApp(LoginScreen());
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context){
+    return MaterialApp(
+      home: const RegisterScreen(),
+    );
+  }
 }
 
 
