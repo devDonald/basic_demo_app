@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'profile_screen.dart';
+import 'login_screen.dart';
 
 void main() {
 
-  runApp(MyApp());
+  runApp(LoginScreen());
 }
 
 
